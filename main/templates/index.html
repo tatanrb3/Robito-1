@@ -3,7 +3,7 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Robito</title>
 
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -17,14 +17,17 @@
                         <div class="text-center">
                             <img src="{% static 'chatbot.png' %}" alt="car-key" border="0">
                             <h2 class="text-center">I´m Robito! :)</h2>
-                            <p id="answer-bot" style="margin: 40px 0; font-size: 1.2rem;">Ask me anything about Jonnathan!!
-                            </p>
+                            <div id="container-answer">
+                                <p id="answer-bot" style="margin: 40px 0; font-size: 1.2rem;">Ask me anything about Jonnathan!!
+                                </p>
+                            </div>
+
                             <form id="register-form" role="form" autocomplete="off" class="form" method="post">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                        <input id="forgetAnswer" name="forgetAnswer" placeholder="Enter your questions about Jonnathan" class="form-control"  type="text">
+                                        <input id="forgetAnswer" name="forgetAnswer" placeholder="Enter your question here!" class="form-control"  type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
