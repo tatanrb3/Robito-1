@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def index(request):
