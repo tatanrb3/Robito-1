@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <div class="container forget-password">
+        <div class="row">
+            <div id="cont" class="col-md-12 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <img src="{% static 'chatbot.png' %}" alt="car-key" border="0">
+                            <h2 class="text-center">I´m Robito! :)</h2>
+                            <p id="answer-bot" style="margin: 40px 0; font-size: 1.2rem;">Ask me anything about Jonnathan!!
+                            </p>
+                            <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                        <input id="forgetAnswer" name="forgetAnswer" placeholder="Enter your questions about Jonnathan" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input id="btnEnviar" name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" value="Ask" type="submit">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'chat.js' %}"></script>
+</body>
+</html>
